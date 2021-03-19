@@ -24,13 +24,29 @@ const ModelsWrapper: React.FC = ({children}) => {
         [registeredModels]
       )
 
-    return (
-        <Container
-            ref={wrapperRef}
+      return (
+        <ModelsContext.Provider
+          value={{
+            wrapperRef,
+            registeredModels,
+            registerModel,
+            unregisterModel,
+            getModelByName
+          }}
         >
+          <Container ref={wrapperRef}>
+            <OverlaysRoot>
+              {registeredModels.map(item => (
+                <ModelOverlay key={item.modelName} model={item}>
+                  {item.overlayNode}
+                </ModelOverlay>
+              ))}
+            </OverlaysRoot>
+    
             {children}
-        </Container>
-    )
-}
+          </Container>
+        </ModelsContext.Provider>
+      )
+    }
 
 export default ModelsWrapper
