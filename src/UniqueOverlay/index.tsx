@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTransform } from 'framer-motion'
 
-import { useWrapperScroll } from '../Model'
+import  useWrapperScroll  from '../components/Model/useWrapperScroll';
 
 import { Container, Header, Logo, Burger, Footer } from './styles'
 
@@ -23,10 +23,10 @@ const UniqueOverlay: React.FC = () => {
             <a href="#">UI Clone</a>
           </li>
           <li>
-            <a href="#">made with 💜</a>
+            <a href="#">2021</a>
           </li>
           <li>
-            <a href="#">by Guilherme Rodz</a>
+            <a href="#">by jmdevc@gmail.com</a>
           </li>
         </ul>
       </Footer>

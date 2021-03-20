@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ModelsWrapper, ModelSection} from '../Model'
 import DefaultOverlayContent from '../DefaultOverlayContent';
-import UniqueOverlay from '../UniqueOverlay'
+import UniqueOverlay from '../../UniqueOverlay';
 
 import {Container, Spacer} from './styles';
 
